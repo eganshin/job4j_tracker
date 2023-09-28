@@ -1,12 +1,11 @@
 package ru.job4j.oop;
 
 public class Cat {
-
     private String name;
     private String food;
 
     public void show() {
-        System.out.println("Cat: " + this.name + "\n" + "ate: " + this.food);
+        System.out.println("Cat: " + this.name + System.lineSeparator() + "ate: " + this.food);
     }
 
     public void eat(String meat) {
@@ -18,12 +17,10 @@ public class Cat {
     }
 
     public static void main(String[] args) {
-
         Cat gav = new Cat();
         gav.giveNick("Gav");
         gav.eat("kotleta");
         gav.show();
-
         Cat black = new Cat();
         black.giveNick("Black");
         black.eat("fish");
