@@ -36,14 +36,14 @@ public class Tracker {
 
     public Item[] findByName(String key) {
         Item[] result = new Item[size];
-        int counter = 0;
-        for (int i = 0; i < this.size; i++) {
+        int count = 0;
+        for (int i = 0; i < size; i++) {
             Item item = items[i];
             if (Objects.equals(item.getName(), key)) {
-                result[counter++] = item;
+                result[count++] = item;
             }
         }
-        return Arrays.copyOf(result, counter);
+        return Arrays.copyOf(result, count);
     }
 
     public boolean replace(int id, Item item) {
