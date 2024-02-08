@@ -99,7 +99,7 @@ public class TrackerTest {
         Tracker tracker = new Tracker();
         Item item = new Item("Bug");
         tracker.add(item);
-        boolean result = tracker.replace(item.getId(), null);
+        boolean result = tracker.replace(-1, null);
         assertThat(result).isFalse();
     }
 

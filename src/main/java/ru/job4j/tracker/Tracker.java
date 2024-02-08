@@ -47,10 +47,6 @@ public class Tracker {
     }
 
     public boolean replace(int id, Item item) {
-        if (id <= 0 || id > 100 || item == null) {
-            System.out.println("Invalid ID or item");
-            return false;
-        }
         int index = indexOf(id);
         if (index != -1) {
             item.setId(id);
@@ -60,10 +56,6 @@ public class Tracker {
     }
 
     public boolean delete(int id) {
-        if (id <= 0 || id > 100) {
-            System.out.println("Invalid ID");
-            return false;
-        }
         int index = indexOf(id);
         if (index != -1) {
             System.arraycopy(items, index + 1, items, index, size - index - 1);
